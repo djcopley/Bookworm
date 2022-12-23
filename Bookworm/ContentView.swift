@@ -18,7 +18,7 @@ struct ContentView: View {
     @State private var addBookSheetIsPresented = false
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 ForEach(books) { book in
                     NavigationLink {
@@ -56,6 +56,7 @@ struct ContentView: View {
                 AddBookView()
             }
             .navigationTitle("Bookworm")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
     
